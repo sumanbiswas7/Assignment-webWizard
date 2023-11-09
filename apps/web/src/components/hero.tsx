@@ -19,7 +19,11 @@ export function Hero() {
 
         <div className={styles.flex_row_cont}>
           <Button size="lg">Enquire</Button>
-          <Button size="lg" variant="secondary">
+          <Button
+            size="lg"
+            variant="secondary"
+            onClick={() => window.open("https:sumanbiswas.vercel.app")}
+          >
             Call Us
           </Button>
         </div>
