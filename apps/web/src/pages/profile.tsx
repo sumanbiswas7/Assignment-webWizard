@@ -1,14 +1,17 @@
 import styles from "./profile.module.css";
 import DUMMY_PETS from "../data/dummy-pets.json";
 import { Button } from "../components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { IconHeartFilled, IconHeartPlus } from "@tabler/icons-react";
 import { useState } from "react";
 
 export default function Profile() {
+  let param = useParams();
+  const id = param.id || 0;
+
   const [favourite, setFavourite] = useState(false);
   const navigate = useNavigate();
-  const item = DUMMY_PETS.find((pet) => pet.id === 2);
+  const item = DUMMY_PETS.find((pet) => pet.id == id);
 
   function handleAddToFavClick() {
     setFavourite(!favourite);
@@ -59,9 +62,9 @@ export default function Profile() {
             <Button>Approach to buy</Button>
             <Button variant="round" onClick={handleAddToFavClick}>
               {favourite ? (
-                <IconHeartPlus color="#404040" size={18} />
-              ) : (
                 <IconHeartFilled color="#404040" size={18} />
+              ) : (
+                <IconHeartPlus color="#404040" size={18} />
               )}
             </Button>
           </div>
