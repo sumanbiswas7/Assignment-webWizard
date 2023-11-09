@@ -2,11 +2,14 @@ import styles from "./items-grid.module.css";
 import DUMMY_PETS from "../data/dummy-pets.json";
 import { Card } from "./card";
 import { useState } from "react";
-import { Group, Modal, Radio } from "@mantine/core";
+import { Flex, Group, Input, Modal, Radio } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { Button } from "./ui/button";
 
 export function ItemsGrid() {
+  const [searchTxt, setSearchTxt] = useState("");
   const [items, setItems] = useState(DUMMY_PETS);
+  const [text, setText] = useState("");
   const [opened, { open, close }] = useDisclosure(false);
 
   return (
@@ -33,6 +36,7 @@ export function ItemsGrid() {
             key={item.id}
             weight={item.weight}
             gender={item.gender}
+            price={item.price}
           />
         ))}
       </div>
@@ -43,27 +47,70 @@ export function ItemsGrid() {
 
   /**
    * ----------------------------------------------------
+   *    Main Function to handle searching
+   * ----------------------------------------------------
+   */
+  function handleSearch() {
+    const slug = searchTxt;
+    const strippedSlug = slug.toLowerCase().replace(" ", "");
+
+    const filteredItems = DUMMY_PETS.filter((item) => {
+      const strippedTxt = item.name.toLowerCase().replace(" ", "");
+      if (strippedTxt.includes(strippedSlug)) return true;
+      else return false;
+    });
+
+    setItems(filteredItems);
+  }
+
+  /**
+   * ----------------------------------------------------
    *    Main Function to handle soring and filtering
    * ----------------------------------------------------
    */
   function handleSortChange(type: string) {
     if (type === "name") {
-    }
-    if (type === "desc") {
-      const sortedProducts = DUMMY_PETS.sort((a, b) => {
-        const descA = a.description.toUpperCase(); // Convert titles to uppercase for case-insensitive sorting
-        const descB = b.description.toUpperCase();
+      setText("Sorted by Name");
+      const sortedItems = DUMMY_PETS.sort((a, b) => {
+        const titleA = a.name.toUpperCase(); // Convert names to uppercase for case-insensitive sorting
+        const titleB = b.name.toUpperCase();
 
-        if (descA < descB) {
+        if (titleA < titleB) {
           return -1;
         }
-        if (descA > descB) {
+        if (titleA > titleB) {
           return 1;
         }
         return 0;
       });
 
-      setItems(sortedProducts);
+      setItems(sortedItems);
+      close();
+    }
+    if (type === "priceL") {
+      setText("Sorted by Price (Low to High)");
+      const sortedItems = DUMMY_PETS.sort((a, b) => a.price - b.price);
+      setItems(sortedItems);
+      close();
+    }
+    if (type === "priceH") {
+      setText("Sorted by Price (High to Low)");
+      const sortedItems = DUMMY_PETS.sort((a, b) => b.price - a.price);
+      setItems(sortedItems);
+      close();
+    }
+
+    // Filter by cats or dogs
+    if (type === "cats") {
+      setText("Showing only Cats");
+      const filteredItems = DUMMY_PETS.filter((pet) => pet.type === "cat");
+      setItems(filteredItems);
+      close();
+    }
+    if (type === "dogs") {
+      setText("Showing only Dogs");
+      const filteredItems = DUMMY_PETS.filter((pet) => pet.type === "dog");
+      setItems(filteredItems);
       close();
     }
   }
@@ -78,7 +125,7 @@ export function ItemsGrid() {
       <Modal
         opened={opened}
         onClose={close}
-        title="Filter Pets"
+        title="Sort/Filter Pets"
         centered
         overlayProps={{
           backgroundOpacity: 0.55,
@@ -86,10 +133,23 @@ export function ItemsGrid() {
         }}
       >
         {/* Modal content */}
+        {text && <p className={styles.filter_txt}>{text}</p>}
+        <Flex align={"center"} justify={"space-between"} gap={"sm"}>
+          <Input
+            style={{ width: "100%" }}
+            mb={"md"}
+            placeholder="Search by pet names or description"
+            value={searchTxt}
+            onChange={(e) => setSearchTxt(e.currentTarget.value)}
+          />
+          <Button size="sm" onClick={handleSearch}>
+            Search
+          </Button>
+        </Flex>
         <div className={styles.modal_box}>
           <div>
-            <h3>Sort By</h3>
             <Radio.Group onChange={handleSortChange}>
+              <h4>Sort By</h4>
               <Group
                 mt="xs"
                 display={"flex"}
@@ -97,13 +157,13 @@ export function ItemsGrid() {
                 align="start"
               >
                 <Radio value="name" label="Name" />
-                <Radio value="price" label="Price" />
-                <Radio value="desc" label="Description" />
+                <Radio value="priceL" label="Price (Low to High)" />
+                <Radio value="priceH" label="Price (High to Low)" />
               </Group>
             </Radio.Group>
           </div>
           <div>
-            <h3>Filter By</h3>
+            <h4>Filter By</h4>
             <Radio.Group onChange={handleSortChange}>
               <Group
                 mt="xs"
@@ -111,9 +171,8 @@ export function ItemsGrid() {
                 style={{ flexDirection: "column" }}
                 align="start"
               >
-                <Radio value="price1" label="Price ($1999 - $3999)" />
-                <Radio value="price2" label="Price ($4000 - $6999)" />
-                <Radio value="price3" label="Price (More than $7000)" />
+                <Radio value="dogs" label="Dogs" />
+                <Radio value="cats" label="Cats" />
               </Group>
             </Radio.Group>
           </div>

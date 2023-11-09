@@ -1,6 +1,7 @@
 import styles from "./card.module.css";
 
 export function Card({
+  price,
   description,
   img,
   title,
@@ -11,10 +12,12 @@ export function Card({
 }: Props) {
   return (
     <div className={styles.container}>
+      {/* Profile Image */}
       <div className={styles.img_container}>
         <img className={styles.cover_img} src={img} />
       </div>
 
+      {/* Description */}
       <div className={styles.info_cont}>
         <h4 className={styles.info_title}>{title}</h4>
         <p className={styles.info_desc}>{description}</p>
@@ -31,7 +34,9 @@ export function Card({
               <span className={styles.acc_col}>Weight</span> {weight}
             </p>
           </div>
-          
+
+          <p className={styles.price}>₹{price.toLocaleString()}/-</p>
+
           {type === "dog" ? (
             <img src="/dog-symbol.svg" className={styles.symbol_img} />
           ) : null}
@@ -52,4 +57,5 @@ interface Props {
   type: string;
   weight: string;
   gender: string;
+  price: number;
 }

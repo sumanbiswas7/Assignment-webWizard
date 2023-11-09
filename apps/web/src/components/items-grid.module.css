@@ -33,11 +33,17 @@
 }
 
 /* Modal */
-
 .modal_box {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+}
+
+.filter_txt {
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+  color: var(--color-accent);
 }
 
 @media only screen and (max-width: 800px) {

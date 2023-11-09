@@ -40,6 +40,12 @@
   text-overflow: ellipsis;
 }
 
+.price {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--color-text);
+}
+
 .sub_info_cont {
   padding: 0.5rem;
   display: flex;

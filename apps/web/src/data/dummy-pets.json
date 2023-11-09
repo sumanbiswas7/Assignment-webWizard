@@ -1,103 +1,101 @@
 [
-    {
-      "id": 1,
-      "name": "Fluffy",
-      "type": "dog",
-      "description": "A friendly and playful dog, always ready for a game of fetch.",
-      "img": "/pets/pet-1.jpg",
-      "age": 3,
-      "weight": "15 kg",
-      "gender": "Male"
-    },
-    {
-      "id": 2,
-      "name": "Whiskers",
-      "type": "cat",
-      "description": "Whiskers is a graceful and independent cat with a love for sunbathing.",
-      "img": "/pets/pet-1.jpg",
-      "age": 2,
-      "weight": "5 kg",
-      "gender": "Female"
-    },
-    {
-      "id": 3,
-      "name": "Rover",
-      "type": "dog",
-      "description": "Rover is a loyal companion, always by your side on adventures.",
-      "img": "/pets/pet-1.jpg",
-      "age": 4,
-      "weight": "20 kg",
-      "gender": "Male"
-    },
-    {
-      "id": 4,
-      "name": "Mittens",
-      "type": "cat",
-      "description": "Mittens is a cuddly cat that enjoys lazy afternoons and a warm lap.",
-      "img": "/pets/pet-1.jpg",
-      "age": 1,
-      "weight": "4 kg",
-      "gender": "Female"
-    },
-    {
-      "id": 5,
-      "name": "Buddy",
-      "type": "dog",
-      "description": "Buddy is an energetic and outgoing dog, perfect for an active lifestyle.",
-      "img": "/pets/pet-1.jpg",
-      "age": 2,
-      "weight": "18 kg",
-      "gender": "Male"
-    },
-    {
-      "id": 6,
-      "name": "Smokey",
-      "type": "cat",
-      "description": "Smokey is a mysterious and elegant cat with captivating green eyes.",
-      "img": "/pets/pet-1.jpg",
-      "age": 3,
-      "weight": "6 kg",
-      "gender": "Male"
-    },
-    {
-      "id": 7,
-      "name": "Charlie",
-      "type": "dog",
-      "description": "Charlie is a gentle giant, great with kids and a loving family pet.",
-      "img": "/pets/pet-1.jpg",
-      "age": 5,
-      "weight": "25 kg",
-      "gender": "Female"
-    },
-    {
-      "id": 8,
-      "name": "Luna",
-      "type": "cat",
-      "description": "Luna is a playful and curious cat who loves chasing after toys.",
-      "img": "/pets/pet-1.jpg",
-      "age": 1,
-      "weight": "3 kg",
-      "gender": "Female"
-    },
-    {
-      "id": 9,
-      "name": "Max",
-      "type": "dog",
-      "description": "Max is a smart and obedient dog, quick to learn new tricks.",
-      "img": "/pets/pet-1.jpg",
-      "age": 3,
-      "weight": "12 kg",
-      "gender": "Male"
-    },
-    {
-      "id": 10,
-      "name": "Oliver",
-      "type": "cat",
-      "description": "Oliver is a mischievous cat with a knack for finding cozy spots to nap.",
-      "img": "/pets/pet-1.jpg",
-      "age": 2,
-      "weight": "5.5 kg",
-      "gender": "Male"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "name": "Fluffy",
+    "type": "dog",
+    "description": "A friendly and playful dog, always ready for a game of fetch.",
+    "img": "/pets/pet-10.jpg",
+    "age": 1,
+    "weight": "8 kg",
+    "gender": "Male",
+    "price": 79999
+  },
+  {
+    "id": 2,
+    "name": "Whiskers",
+    "type": "cat",
+    "description": "Whiskers is a graceful and independent cat with a love for sunbathing.",
+    "img": "/pets/pet-8.jpeg",
+    "age": 2,
+    "weight": "5 kg",
+    "gender": "Female",
+    "price": 15999
+  },
+  {
+    "id": 3,
+    "name": "Rover",
+    "type": "dog",
+    "description": "Rover is a loyal companion, always by your side on adventures.",
+    "img": "/pets/pet-2.jpg",
+    "age": 4,
+    "weight": "20 kg",
+    "gender": "Male",
+    "price": 40000
+  },
+  {
+    "id": 4,
+    "name": "Mittens",
+    "type": "cat",
+    "description": "Mittens is a cuddly cat that enjoys lazy afternoons and a warm lap.",
+    "img": "/pets/pet-6.jpg",
+    "age": 1,
+    "weight": "4 kg",
+    "gender": "Female",
+    "price": 20000
+  },
+  {
+    "id": 5,
+    "name": "Buddy",
+    "type": "dog",
+    "description": "Buddy is an energetic and outgoing dog, perfect for an active lifestyle.",
+    "img": "/pets/pet-3.webp",
+    "age": 2,
+    "weight": "18 kg",
+    "gender": "Male",
+    "price": 65000
+  },
+  {
+    "id": 6,
+    "name": "Smokey",
+    "type": "cat",
+    "description": "Smokey is a mysterious and elegant cat with captivating green eyes.",
+    "img": "/pets/pet-7.jpg",
+    "age": 3,
+    "weight": "6 kg",
+    "gender": "Male",
+    "price": 12000
+  },
+  {
+    "id": 7,
+    "name": "Charlie",
+    "type": "dog",
+    "description": "Charlie is a gentle giant, great with kids and a loving family pet.",
+    "img": "/pets/pet-4.jpg",
+    "age": 1,
+    "weight": "7 kg",
+    "gender": "Female",
+    "price": 45000
+  },
+  {
+    "id": 8,
+    "name": "Luna",
+    "type": "cat",
+    "description": "Luna is a playful and curious cat who loves chasing after toys.",
+    "img": "/pets/pet-9.jpeg",
+    "age": 1,
+    "weight": "3 kg",
+    "gender": "Female",
+    "price": 8000
+  },
+  {
+    "id": 9,
+    "name": "Max",
+    "type": "dog",
+    "description": "Max is a smart and obedient dog, quick to learn new tricks.",
+    "img": "/pets/pet-5.jpg",
+    "age": 1.5,
+    "weight": "7 kg",
+    "gender": "Male",
+    "price": 120000
+  }
+]
