@@ -8,6 +8,10 @@
   outline: 1px solid transparent;
   cursor: pointer;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   text-transform: uppercase;
 }
 

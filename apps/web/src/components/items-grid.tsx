@@ -19,9 +19,9 @@ export function ItemsGrid() {
         <p className={styles.browse_txt}>
           MEET OUR <span className={styles.col_accent}>PET </span>PALS
         </p>
-        <button onClick={open}>
+        <Button onClick={open}>
           <img src="/filter-icon.svg" className={styles.filter_icon} />
-        </button>
+        </Button>
       </div>
 
       {/* Watches Grid */}
