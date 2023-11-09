@@ -18,8 +18,10 @@ export function Hero() {
         </p>
 
         <div className={styles.flex_row_cont}>
-          <Button>Enquire</Button>
-          <Button variant="secondary">Call Us</Button>
+          <Button size="lg">Enquire</Button>
+          <Button size="lg" variant="secondary">
+            Call Us
+          </Button>
         </div>
       </div>
 

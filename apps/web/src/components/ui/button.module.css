@@ -7,8 +7,19 @@
   transition: all 0.3s;
   outline: 1px solid transparent;
   cursor: pointer;
-  
+
   text-transform: uppercase;
+}
+
+.btn_lg {
+  padding: 0.45rem 1.15rem;
+  font-size: 1rem;
+  border-radius: 1.5rem;
+}
+
+.btn_small {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.7rem;
 }
 
 .button_cont:hover {
