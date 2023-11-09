@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding-block: var(--spacing-default);
+  padding-block: calc(var(--spacing-default) * 1.5);
 }
 
 /* Header and Subheader */
@@ -41,8 +41,8 @@
 
 /* Image and circles */
 .gradient_circle {
-  height: 20vmax;
-  width: 20vmax;
+  height: 25vmax;
+  width: 25vmax;
   border-radius: 50%;
 
   display: flex;
@@ -56,7 +56,7 @@
   );
 }
 .hero_prod_img {
-  max-width: 20vmax;
+  max-width: 26vmax;
 }
 
 @media only screen and (max-width: 650px) {
