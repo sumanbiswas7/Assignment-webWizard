@@ -7,6 +7,8 @@
   transition: all 0.3s;
   outline: 1px solid transparent;
   cursor: pointer;
+  
+  text-transform: uppercase;
 }
 
 .button_cont:hover {

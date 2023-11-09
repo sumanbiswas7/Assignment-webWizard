@@ -1,3 +1,8 @@
+.main_container {
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   height: 4rem;
   padding-bottom: 0;
@@ -7,7 +12,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: calc(var(--spacing-default) * 2);
   padding-inline: var(--spacing-default);
 }
 
@@ -22,6 +26,7 @@ a {
   font-weight: 600;
   color: var(--color-text);
 }
+
 a:nth-child(1) {
   color: var(--color-accent);
 }
@@ -30,7 +35,6 @@ a:nth-child(1) {
   height: 1px;
   bottom: -1px;
   width: 100%;
-  position: absolute;
 
   background: linear-gradient(
     90deg,
@@ -38,4 +42,11 @@ a:nth-child(1) {
     var(--color-accent) 50%,
     var(--color-background) 100%
   );
+}
+
+@media only screen and (max-width: 450px) {
+  /* Hide last link on small screens for now */
+  a:nth-child(3) {
+    display: none;
+  }
 }

@@ -1,21 +1,31 @@
 import styles from "./hero.module.css";
+import { Button } from "./ui/button";
 
 export function Hero() {
   return (
     <div className={styles.hero_container}>
       <div className={styles.text_cont}>
-        <h2 className={styles.title}>Rolex Cellini</h2>
+        <h2 className={styles.title}>
+          WELCOME TO THE <br />
+          <span className={styles.col_accent}>ULTIMATE</span> DESTINATION FOR{" "}
+          <br />
+          <span className={styles.col_accent}>PET</span> LOVERS
+        </h2>
+
         <p className={styles.desc}>
-          Exquisite timepiece exemplifies Rolex's dedication to precision and
-          luxury, making it a must-have for those with a refined taste in
-          watches.
+          Where Tails Wag and Whiskers Purr with Delight! Explore a World of Pet
+          Delights and Discover What Makes Your Furry Friend Smile
         </p>
-        <div className={styles.order_price_cont}>
-          <button>Order Now</button>
-          <p className={styles.price}>$8,999</p>
+
+        <div className={styles.flex_row_cont}>
+          <Button>Enquire</Button>
+          <Button variant="secondary">Call Us</Button>
         </div>
       </div>
-      <img src="/hero-product.webp" className={styles.hero_prod_img} />
+
+      <div className={styles.gradient_circle}>
+        <img src="/hero.png" className={styles.hero_prod_img} />
+      </div>
     </div>
   );
 }
