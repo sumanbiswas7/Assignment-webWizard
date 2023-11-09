@@ -1,17 +1,16 @@
 import styles from "./card.module.css";
+import { useNavigate } from "react-router-dom";
 
-export function Card({
-  price,
-  description,
-  img,
-  title,
-  age,
-  type,
-  weight,
-  gender,
-}: Props) {
+export function Card({ ...props }: Props) {
+  const { price, description, img, title, age, type, weight, gender, id } =
+    props;
+  const navigate = useNavigate();
+
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      onClick={() => navigate(`/profile/${id}`)}
+    >
       {/* Profile Image */}
       <div className={styles.img_container}>
         <img className={styles.cover_img} src={img} />
@@ -50,6 +49,7 @@ export function Card({
 }
 
 interface Props {
+  id: number;
   img: string;
   title: string;
   description: string;

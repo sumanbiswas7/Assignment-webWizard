@@ -28,6 +28,7 @@ export function ItemsGrid() {
       <div className={styles.grid_container}>
         {items.map((item) => (
           <Card
+            id={item.id}
             title={item.name}
             description={item.description}
             img={item.img}

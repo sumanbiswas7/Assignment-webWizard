@@ -540,6 +540,19 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.5.1.tgz#5f1b518ec5fa54437c0b7c4a821546c64fed6922"
   integrity sha512-6i/8UoL0P5y4leBIGzvkZdS85RDMG9y1ihZzmTZQ5LdHUYmZ7pKFoj8X0236s3lusPs1Fa5HTQUpwI+UfTcmeA==
 
+"@tabler/icons-react@^2.40.0":
+  version "2.40.0"
+  resolved "https://registry.yarnpkg.com/@tabler/icons-react/-/icons-react-2.40.0.tgz#14efb60f0d841689c1ddf5691646dbfc3fa01901"
+  integrity sha512-C+dDOZowFbwI3LGQP0fdua+hOPkGkW7XeMcRXTSdEKc5fD75W6zRO5nXnWivIMRKsi/Y26EDmnQo15N8JX378w==
+  dependencies:
+    "@tabler/icons" "2.40.0"
+    prop-types "^15.7.2"
+
+"@tabler/icons@2.40.0":
+  version "2.40.0"
+  resolved "https://registry.yarnpkg.com/@tabler/icons/-/icons-2.40.0.tgz#96cecc990a03412b88194ce3765280d2e63c1be6"
+  integrity sha512-VqKsBSX159cLFTnCzkCmGhZtSPJHNN0lM2sC4xe0HPOfPUnjiex7rDHDdut4oe4iKRecDDpwXwM9BcU6xCPlCg==
+
 "@types/babel__core@^7.20.3":
   version "7.20.4"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.20.4.tgz#26a87347e6c6f753b3668398e34496d6d9ac6ac0"

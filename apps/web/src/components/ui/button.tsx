@@ -8,7 +8,11 @@ export function Button({
   ...props
 }: Props) {
   const variantClass =
-    variant === "primary" ? styles.primary : styles.secondary;
+    variant === "primary"
+      ? styles.primary
+      : variant === "secondary"
+      ? styles.secondary
+      : styles.round;
 
   const sizeClass =
     size === "sm" ? styles.btn_small : size === "lg" ? styles.btn_lg : "";
@@ -25,6 +29,6 @@ export function Button({
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: ReactNode;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "round";
   size?: "sm" | "md" | "lg";
 }

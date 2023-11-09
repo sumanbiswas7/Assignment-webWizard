@@ -1,3 +1,16 @@
+.page_cont {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_span {
+  position: absolute;
+  top: var(--spacing-default);
+  left: var(--spacing-default);
+}
+
 .container {
   background-color: var(--color-card);
   border-radius: 1rem;
@@ -67,4 +80,10 @@
 .acc_col {
   font-weight: 600;
   color: var(--color-accent);
+}
+
+.row_cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
