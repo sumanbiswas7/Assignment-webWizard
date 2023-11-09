@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pagination_btn_cont {
@@ -9,6 +10,10 @@
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+}
+
+.col_accent {
+  color: var(--color-accent);
 }
 
 /* Browse Collection */
@@ -28,29 +33,8 @@
 }
 
 /* Modal */
-.modal_cont {
-  transition: all 0.25s;
-  width: calc(100vw - 5px);
-  height: 100vh;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px);
-  overflow: hidden;
-}
 
 .modal_box {
-  color: var(--color-text-dark);
-  padding: 1rem;
-  background-color: var(--color-background-dark);
-  border: 1px solid #252525;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
   display: flex;
   justify-content: space-between;
   gap: 1rem;

@@ -6,6 +6,7 @@ export function NavBar(): JSX.Element {
     <div className={styles.main_container}>
       <nav className={styles.container}>
         <div className={styles.flex_row_cont}>
+          <img src="/logo.svg" className={styles.logo} />
           <a>Home</a>
           <a>About</a>
           <a>Contact</a>

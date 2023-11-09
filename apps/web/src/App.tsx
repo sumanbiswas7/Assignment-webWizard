@@ -1,7 +1,7 @@
 import styles from "./App.module.css";
 import { Hero } from "./components/hero";
 import { NavBar } from "./components/navbar";
-import { ProductsGrid } from "./components/products-grid";
+import { ItemsGrid } from "./components/items-grid";
 
 function App() {
   return (
@@ -11,8 +11,8 @@ function App() {
       <main className={styles.main_cont}>
         <Hero />
 
-        {/* Products */}
-        {/* <ProductsGrid /> */}
+        {/* Pets */}
+        <ItemsGrid />
       </main>
     </div>
   );
