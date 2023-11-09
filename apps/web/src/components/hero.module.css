@@ -1,0 +1,37 @@
+.hero_container {
+  background-color: var(--color-background-dark);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.text_cont {
+  padding-left: 3vw;
+  padding-block: 1rem;
+}
+
+.title {
+  font-size: 3.5vmax;
+  color: var(--color-accent);
+}
+
+.desc {
+  margin-top: calc(var(--spacing-default) * 0.4);
+  font-size: 1.5vmax;
+  max-width: 55ch;
+  color: var(--color-text-dark);
+}
+
+.order_price_cont {
+  margin-top: calc(var(--spacing-default) * 0.75);
+  display: flex;
+  align-items: center;
+}
+
+.hero_prod_img {
+  max-width: 30vmax;
+  right: 0;
+  bottom: 0;
+}

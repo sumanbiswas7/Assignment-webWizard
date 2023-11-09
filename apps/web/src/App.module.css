@@ -1,0 +1,28 @@
+.main_cont {
+  margin: calc(var(--spacing-default) * 2.5);
+}
+
+.price {
+  margin-left: 1rem;
+  color: var(--color-text-dark);
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 650px) {
+  .main_cont {
+    margin: calc(var(--spacing-default) * 0.8);
+    margin-top: 2rem;
+  }
+  .hero_container {
+    flex-direction: column-reverse;
+  }
+  .desc {
+    font-size: 1.75vmax;
+  }
+  .hero_prod_img {
+    margin-block: 1rem;
+  }
+  .text_cont {
+    padding: 1rem;
+  }
+}

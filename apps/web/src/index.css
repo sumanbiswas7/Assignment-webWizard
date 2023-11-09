@@ -1,0 +1,46 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  /* Colors */
+  --color-background: #fff5f2;
+
+  --color-text-light: #dcdcdc;
+  --color-text: #404040;
+
+  --color-card-stroke: #e5dddb;
+
+  --color-accent-light: #ffdacf;
+  --color-accent: #ffa88e;
+  --color-accent-dark: #ff815b;
+
+  /* Spacing */
+  --spacing-default: 1rem;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+}

@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "title": "Rolex Oyster X2",
+    "description": "Exquisite timepiece exemplifies Rolex's dedication to precision and luxury, making it a must-have for those with a refined taste in watches.",
+    "img": "/products/webp/watch-1.webp",
+    "price": 6999
+  },
+  {
+    "id": 2,
+    "title": "Omega Seamaster II",
+    "description": "The Omega Seamaster II is a classic diver's watch with exceptional water resistance and style. A favorite among enthusiasts.",
+    "img": "/products/webp/watch-2.webp",
+    "price": 5999
+  },
+  {
+    "id": 3,
+    "title": "Tag Heuer Carrera",
+    "description": "Tag Heuer's Carrera is a timeless piece known for its sporty design and advanced chronograph features. A perfect blend of style and functionality.",
+    "img": "/products/webp/watch-3.webp",
+    "price": 4999
+  },
+  {
+    "id": 4,
+    "title": "Patek Philippe Calatrava",
+    "description": "The Patek Philippe Calatrava is an embodiment of elegance and simplicity, known for its understated beauty and precision.",
+    "img": "/products/webp/watch-4.webp",
+    "price": 7999
+  },
+  {
+    "id": 5,
+    "title": "Audemars Piguet Royal Oak",
+    "description": "The Royal Oak is a masterpiece of modern watchmaking, known for its distinctive octagonal shape and mechanical excellence.",
+    "img": "/products/webp/watch-5.webp",
+    "price": 8999
+  },
+  {
+    "id": 6,
+    "title": "Hublot Big Bang",
+    "description": "The Hublot Big Bang is a fusion of tradition and innovation, featuring a bold design and high-performance movements.",
+    "img": "/products/webp/watch-6.webp",
+    "price": 6999
+  },
+  {
+    "id": 7,
+    "title": "IWC Pilot's Watch",
+    "description": "IWC's Pilot's Watch is a tribute to aviation history, offering reliability and precision in a classic design.",
+    "img": "/products/webp/watch-7.webp",
+    "price": 5499
+  },
+  {
+    "id": 8,
+    "title": "Breitling Navitimer",
+    "description": "The Breitling Navitimer is an iconic aviator's watch with a distinctive slide rule bezel and chronograph functions.",
+    "img": "/products/webp/watch-8.webp",
+    "price": 6499
+  },
+  {
+    "id": 9,
+    "title": "Seiko Prospex Diver",
+    "description": "Seiko's Prospex Diver is a legendary dive watch known for its durability and practicality under extreme conditions.",
+    "img": "/products/webp/watch-9.webp",
+    "price": 2999
+  },
+  {
+    "id": 10,
+    "title": "Citizen Eco-Drive",
+    "description": "The Citizen Eco-Drive is a solar-powered timepiece, combining eco-friendliness with modern style and functionality.",
+    "img": "/products/webp/watch-10.webp",
+    "price": 1999
+  },
+  {
+    "id": 11,
+    "title": "Longines Master Collection",
+    "description": "The Longines Master Collection is a symbol of classic elegance and watchmaking expertise, appealing to connoisseurs.",
+    "img": "/products/webp/watch-11.webp",
+    "price": 3999
+  }
+]
