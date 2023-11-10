@@ -20,6 +20,7 @@
 .browse_cont {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-block: calc(var(--spacing-default) * 2);
   padding-inline: var(--spacing-default);
 }

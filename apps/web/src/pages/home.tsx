@@ -5,15 +5,14 @@ import { ItemsGrid } from "./../components/items-grid";
 
 export default function Home() {
   return (
-    <div>
+    <main>
       <NavBar />
 
       <main className={styles.main_cont}>
         <Hero />
-
         {/* Pets */}
         <ItemsGrid />
       </main>
-    </div>
+    </main>
   );
 }

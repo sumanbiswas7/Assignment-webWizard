@@ -14,17 +14,17 @@ export function ItemsGrid() {
 
   return (
     <div>
-      {/* Browse Pets Text */}
+      {/* Browse Pets and Filter */}
       <div className={styles.browse_cont}>
         <p className={styles.browse_txt}>
           MEET OUR <span className={styles.col_accent}>PET </span>PALS
         </p>
-        <Button onClick={open}>
+        <Button style={{ paddingBlock: 10 }} onClick={open}>
           <img src="/filter-icon.svg" className={styles.filter_icon} />
         </Button>
       </div>
 
-      {/* Watches Grid */}
+      {/* Pets Grid */}
       <div className={styles.grid_container}>
         {items.map((item) => (
           <Card
