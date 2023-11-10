@@ -3,7 +3,7 @@ import DUMMY_PETS from "../data/dummy-pets.json";
 import { Button } from "../components/ui/button";
 import { useNavigate, useParams } from "react-router-dom";
 import { IconHeartFilled, IconHeartPlus } from "@tabler/icons-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Profile() {
   let param = useParams();
@@ -15,7 +15,30 @@ export default function Profile() {
 
   function handleAddToFavClick() {
     setFavourite(!favourite);
+    const favs = localStorage.getItem("favourite");
+    const favsMap = JSON.parse(favs || "{}");
+
+    let newFavsMap;
+    if (favourite) {
+      delete favsMap[id];
+      newFavsMap = favsMap;
+    } else {
+      newFavsMap = { ...favsMap, [id]: true };
+    }
+
+    const newFavs = JSON.stringify(newFavsMap);
+    localStorage.setItem("favourite", newFavs);
   }
+
+  function handleFirstLoad() {
+    const favs = localStorage.getItem("favourite");
+    const favsMap = JSON.parse(favs || "{}");
+    if (id in favsMap) setFavourite(true);
+  }
+
+  useEffect(() => {
+    handleFirstLoad();
+  }, []);
 
   return (
     <div className={styles.page_cont}>
