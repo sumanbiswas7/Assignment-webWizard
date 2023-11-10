@@ -1,3 +1,4 @@
+import { Protected } from "./components/wrapper/protected";
 import Home from "./pages/home";
 import { Login } from "./pages/login";
 import Profile from "./pages/profile";
@@ -10,7 +11,11 @@ export const routes = [
   },
   {
     path: "/profile/:id",
-    element: <Profile />,
+    element: (
+      <Protected>
+        <Profile />
+      </Protected>
+    ),
   },
   {
     path: `auth/signup`,
