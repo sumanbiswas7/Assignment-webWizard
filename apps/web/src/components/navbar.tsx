@@ -5,7 +5,10 @@ import { Button } from "./ui/button";
 export function NavBar(): JSX.Element {
   const navigate = useNavigate();
 
-  function handleSignout() {}
+  function handleSignout() {
+    localStorage.removeItem("token");
+    alert("User logged out");
+  }
 
   return (
     <div className={styles.main_container}>

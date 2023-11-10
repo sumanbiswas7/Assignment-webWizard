@@ -10,9 +10,6 @@ export function Login() {
   const navigate = useNavigate();
 
   async function handleLogin() {
-    // TODO: Login logic backend
-    // Get jwt from backend and store
-
     if (!form.email || !form.pass) {
       return alert("Email and Password is required");
     }
@@ -21,7 +18,31 @@ export function Login() {
       return alert("Please enter a valid email");
     }
 
-    alert("Success");
+    const response = await fetch(
+      "https://1t55ielrsb.execute-api.ap-south-1.amazonaws.com/dev/auth/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          // You might need to include additional headers like authorization tokens here
+        },
+        body: JSON.stringify({ email: form.email, password: form.pass }),
+      }
+    );
+
+    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+
+    const result = await response.json();
+
+    if (result.status !== 200) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const token = result.data.token || null;
+    if (!token) throw new Error(`No token found from API`);
+    localStorage.setItem("token", token);
+    alert("Login successful");
+    navigate("/");
   }
 
   return (
