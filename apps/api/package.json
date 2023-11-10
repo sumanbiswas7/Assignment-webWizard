@@ -1,0 +1,29 @@
+{
+  "name": "node-express-serverless-api",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc && node dist/devServer.js",
+    "dev": "nodemon src/devServer.ts",
+    "deploy": "serverless deploy",
+    "remove": "serverless remove"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@petz/utils": "*",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "serverless-http": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.15",
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20",
+    "serverless-plugin-monorepo": "^0.11.0",
+    "serverless-plugin-typescript": "^2.1.4",
+    "ts-node": "^10.9.1"
+  }
+}
