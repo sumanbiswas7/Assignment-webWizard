@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./navbar.module.css";
 import { Button } from "./ui/button";
 
 export function NavBar(): JSX.Element {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.main_container}>
       <nav className={styles.container}>
@@ -13,8 +16,9 @@ export function NavBar(): JSX.Element {
         </div>
 
         <div className={styles.flex_row_cont}>
-          <Button>SIGN UP</Button>
-          <Button variant="secondary">LOG IN</Button>
+          {/* Hide Signup for now as database integration required 💰*/}
+          {/* <Button onClick={() => navigate("/auth/signup")}>SIGN UP</Button> */}
+          <Button onClick={() => navigate("/auth/login")}>LOG IN</Button>
         </div>
       </nav>
 
