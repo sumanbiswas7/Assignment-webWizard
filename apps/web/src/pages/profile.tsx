@@ -46,6 +46,13 @@ export default function Profile() {
         <Button onClick={() => navigate("/")}>Go Back</Button>
       </span>
 
+      <span className={styles.btn_span_fav}>
+        <Button onClick={() => navigate("/favourites")}>
+          Favourites &nbsp;
+          <IconHeartPlus size={15} />
+        </Button>
+      </span>
+
       <div className={styles.container}>
         {/* Profile Image */}
         <div className={styles.img_container}>

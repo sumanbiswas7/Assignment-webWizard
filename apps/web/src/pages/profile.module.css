@@ -10,6 +10,11 @@
   top: var(--spacing-default);
   left: var(--spacing-default);
 }
+.btn_span_fav {
+  position: absolute;
+  top: var(--spacing-default);
+  right: var(--spacing-default);
+}
 
 .container {
   background-color: var(--color-card);

@@ -1,4 +1,5 @@
 import { Protected } from "./components/wrapper/protected";
+import { Favourites } from "./pages/favourites";
 import Home from "./pages/home";
 import { Login } from "./pages/login";
 import Profile from "./pages/profile";
@@ -14,6 +15,14 @@ export const routes = [
     element: (
       <Protected>
         <Profile />
+      </Protected>
+    ),
+  },
+  {
+    path: "/favourites",
+    element: (
+      <Protected>
+        <Favourites />
       </Protected>
     ),
   },

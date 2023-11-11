@@ -1,23 +1,31 @@
 import styles from "./items-grid.module.css";
 import DUMMY_PETS from "../data/dummy-pets.json";
 import { Card } from "./card";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Flex, Group, Input, Modal, Radio } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { Button } from "./ui/button";
 
-export function ItemsGrid() {
+export function ItemsGrid({ data = DUMMY_PETS, title }: Props) {
   const [searchTxt, setSearchTxt] = useState("");
-  const [items, setItems] = useState(DUMMY_PETS);
+  const [items, setItems] = useState(data);
   const [text, setText] = useState("");
   const [opened, { open, close }] = useDisclosure(false);
+
+  useEffect(() => {
+    setItems(data);
+  }, [data]);
 
   return (
     <div>
       {/* Browse Pets and Filter */}
       <div className={styles.browse_cont}>
         <p className={styles.browse_txt}>
-          MEET OUR <span className={styles.col_accent}>PET </span>PALS
+          {title || (
+            <>
+              MEET OUR <span className={styles.col_accent}>PET </span>PALS
+            </>
+          )}
         </p>
         <Button style={{ paddingBlock: 10 }} onClick={open}>
           <img src="/filter-icon.svg" className={styles.filter_icon} />
@@ -55,7 +63,7 @@ export function ItemsGrid() {
     const slug = searchTxt;
     const strippedSlug = slug.toLowerCase().replace(" ", "");
 
-    const filteredItems = DUMMY_PETS.filter((item) => {
+    const filteredItems = data.filter((item) => {
       const strippedTxt = item.name.toLowerCase().replace(" ", "");
       if (strippedTxt.includes(strippedSlug)) return true;
       else return false;
@@ -72,7 +80,7 @@ export function ItemsGrid() {
   function handleSortChange(type: string) {
     if (type === "name") {
       setText("Sorted by Name");
-      const sortedItems = DUMMY_PETS.sort((a, b) => {
+      const sortedItems = data.sort((a, b) => {
         const titleA = a.name.toUpperCase(); // Convert names to uppercase for case-insensitive sorting
         const titleB = b.name.toUpperCase();
 
@@ -90,13 +98,13 @@ export function ItemsGrid() {
     }
     if (type === "priceL") {
       setText("Sorted by Price (Low to High)");
-      const sortedItems = DUMMY_PETS.sort((a, b) => a.price - b.price);
+      const sortedItems = data.sort((a, b) => a.price - b.price);
       setItems(sortedItems);
       close();
     }
     if (type === "priceH") {
       setText("Sorted by Price (High to Low)");
-      const sortedItems = DUMMY_PETS.sort((a, b) => b.price - a.price);
+      const sortedItems = data.sort((a, b) => b.price - a.price);
       setItems(sortedItems);
       close();
     }
@@ -104,13 +112,13 @@ export function ItemsGrid() {
     // Filter by cats or dogs
     if (type === "cats") {
       setText("Showing only Cats");
-      const filteredItems = DUMMY_PETS.filter((pet) => pet.type === "cat");
+      const filteredItems = data.filter((pet) => pet.type === "cat");
       setItems(filteredItems);
       close();
     }
     if (type === "dogs") {
       setText("Showing only Dogs");
-      const filteredItems = DUMMY_PETS.filter((pet) => pet.type === "dog");
+      const filteredItems = data.filter((pet) => pet.type === "dog");
       setItems(filteredItems);
       close();
     }
@@ -181,4 +189,9 @@ export function ItemsGrid() {
       </Modal>
     );
   }
+}
+
+interface Props {
+  data?: typeof DUMMY_PETS;
+  title?: string;
 }
