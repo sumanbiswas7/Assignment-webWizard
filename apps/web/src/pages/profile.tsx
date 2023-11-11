@@ -43,7 +43,7 @@ export default function Profile() {
   return (
     <div className={styles.page_cont}>
       <span className={styles.btn_span}>
-        <Button onClick={() => navigate("/")}>Go Back</Button>
+        <Button onClick={() => navigate(-1)}>Go Back</Button>
       </span>
 
       <span className={styles.btn_span_fav}>

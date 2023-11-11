@@ -16,6 +16,8 @@ export function ItemsGrid({ data = DUMMY_PETS, title }: Props) {
     setItems(data);
   }, [data]);
 
+  if (!items.length) return <h1>No Pets Found ☹️</h1>;
+
   return (
     <div>
       {/* Browse Pets and Filter */}
